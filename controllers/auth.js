@@ -100,7 +100,7 @@ exports.forgotPassword = async (req, res, next) => {
 
         //create reset url 
 
-        const resetUrl = `http://localhost:3000/passwordreset/${resetToken}`
+        const resetUrl = `https://resetpasswordbackend.herokuapp.com/${resetToken}`
 
         const message = `
         <h1> You have requested password reset </h1>
