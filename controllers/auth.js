@@ -169,6 +169,15 @@ exports.resetPassword = async (req, res, next) => {
 }
 
 
+exports.test = async (req, res, next) => {
+    const test = "Hi there!!!"
+
+    res.send(test)
+
+
+}
+
+
 
 //this function have access to to user we created
 //used above 
