@@ -10,8 +10,6 @@ const crypto = require('crypto')
 
 
 //REGISTER 
-
-
 exports.register = async (req, res, next) => {
     //we need things from body here
     //destructure it extract things from body
@@ -28,7 +26,7 @@ exports.register = async (req, res, next) => {
     } catch (error) {
         //if error 
         //custome errorHandler we build in utils
-        next(error)
+        next(error);
 
     }
 }
@@ -67,11 +65,7 @@ exports.login = async (req, res, next) => {
             res.status(404).json({ success: false, error: "Invalid Credentials!!!" })
         }
 
-
         sendToken(user, 200, res);
-
-
-
     } catch (error) {
         next(error)
 
@@ -100,7 +94,7 @@ exports.forgotPassword = async (req, res, next) => {
 
         //create reset url 
 
-        const resetUrl = `https://resetpasswordbackend.herokuapp.com/${resetToken}`
+        const resetUrl = `http://localhost:3000/passwordreset/${resetToken}`
 
         const message = `
         <h1> You have requested password reset </h1>

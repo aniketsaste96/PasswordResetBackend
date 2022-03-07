@@ -1,6 +1,8 @@
 const nodemailer = require('nodemailer');
 
 const sendEmail = (options) => {
+
+
     const transporter = nodemailer.createTransport({
         service: process.env.EMAIL_SERVICE,
         auth: {
@@ -9,6 +11,8 @@ const sendEmail = (options) => {
         }
     })
 
+
+    //sending mail from my account
     const mailOptions = {
         from: process.env.EMAIL_FROM,
         to: options.to,

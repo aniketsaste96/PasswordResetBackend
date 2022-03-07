@@ -11,4 +11,4 @@ const connectDB = async () => {
 
 //export it to server.js
 
-module.exports = connectDB
+module.exports = connectDB;

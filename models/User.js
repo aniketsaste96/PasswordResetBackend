@@ -2,9 +2,9 @@
 
 //import 
 const crypto = require('crypto');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 const UserSchema = new mongoose.Schema({
     username: {
         type: String,

@@ -30,7 +30,6 @@ exports.protect = async (req, res, next) => {
         next();
         // response.end()
     } catch (error) {
-
         return next(new ErrorResponse("Not authorized to access this route", 401));
         //use this in prote route
     }
