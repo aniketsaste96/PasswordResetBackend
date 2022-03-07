@@ -15,6 +15,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use("/", (req, res) => {
+    console.log("hello world")
+})
+
 // if anything (api/auth) middleware redirect it to routes/auth
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/private', require('./routes/private'));
